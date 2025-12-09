@@ -62,9 +62,9 @@ func getBatteryValuePt2(bank []int) int {
 		initPosition := len(bank) - offset
 		batteryNodes[i] = BatteryNode{Value: bank[initPosition], Position: initPosition}
 	}
-	fmt.Println(bank)
+	// fmt.Println(bank)
 	for i := len(bank) - (BatLimit + 1); i >= 0; i-- {
-		fmt.Println(batteryNodes)
+		// fmt.Println(batteryNodes)
 		for j := range batteryNodes {
 			if bank[i] >= batteryNodes[j].Value {
 				temp := batteryNodes[j].Value  
@@ -82,7 +82,7 @@ func getBatteryValuePt2(bank []int) int {
 		}
 	}
 	val := getCurrentJoltageArr(batteryNodes)
-	fmt.Println(val)
+	// fmt.Println(val)
 	return val
 }
 

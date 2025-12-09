@@ -99,3 +99,15 @@ func TestMain(t *testing.T) {
 		}
 	})
 }
+
+func BenchmarkPt1(b *testing.B) {
+	lines := parseFile()
+	b.ResetTimer()
+	solve1(lines)	
+}
+
+func BenchmarkPt2(b *testing.B) {
+	lines := parseFile()
+	b.ResetTimer()
+	solve2(lines)	
+}
